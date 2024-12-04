@@ -14,7 +14,6 @@ function App() {
       const getAdvice = async () => {
       const response = await fetch (`https://bored.api.lewagon.com/api/activity/`)
       const data = await response.json();
-      console.log(data.activity);
       setAdvice(data.activity);
     }
  
@@ -29,10 +28,6 @@ function App() {
         <p>{show ? advice : advice.substring(0,0)}</p>
         <button  class="button" onClick = {() => setShow(getAdvice)}>Click Here</button>
       </div>
-       {/* <div className='header'>
-        <p>{advice}</p>
-        <button onClick = {getAdvice}>Click Here</button>
-      </div> */}
     </div>
 
   );
