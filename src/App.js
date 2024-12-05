@@ -24,9 +24,10 @@ function App() {
         <h2>Do you feel bored? <br></br>Click the button and choose what to do today.</h2>
         
       </div>
-      <div className='header'>
-        <p>{show ? advice : advice.substring(0,0)}</p>
-        <button  class="button" onClick = {() => setShow(getAdvice)}>Click Here</button>
+    
+      <div className="header">
+         <p>{show ? advice : ""}</p> 
+         <button className="button" onClick={() => { getAdvice(); setShow(true); }}> Click Here </button> 
       </div>
     </div>
 
